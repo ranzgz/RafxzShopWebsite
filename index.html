@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Penjualan</title>
+    <title>Digital Product Store</title>
     <style>
-        /* CSS untuk tata letak dasar */
+        /* Style dasar untuk website */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f0f0f0;
+            color: #333;
         }
 
+        /* Header styling */
         header {
-            background-color: #4CAF50;
+            background-color: #1abc9c;
             color: white;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
         }
 
         .container {
@@ -26,95 +33,153 @@
             padding: 20px;
         }
 
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 28px;
+            color: #34495e;
+        }
+
+        /* Produk styling */
         .product {
             display: flex;
             justify-content: space-around;
-            margin-top: 50px;
+            flex-wrap: wrap;
+            margin-top: 20px;
         }
 
-        .product img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            transition: transform 1s;
-        }
-
-        .product img:hover {
-            transform: rotate(360deg); /* Gambar produk berputar saat dihover */
-        }
-
-        .title {
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
             text-align: center;
-            color: #333;
+            transition: transform 0.3s;
+            width: 30%;
+            margin-bottom: 20px;
         }
 
-        /* Elemen hiasan berputar */
+        .product-card:hover {
+            transform: translateY(-10px); /* Efek hover saat produk terangkat */
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            padding: 20px 0;
+            font-size: 22px;
+            color: #2c3e50;
+        }
+
+        .product-card p {
+            font-size: 16px;
+            color: #7f8c8d;
+            padding: 0 20px;
+            line-height: 1.6;
+        }
+
+        .buy-button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #c0392b; /* Efek hover pada tombol beli */
+        }
+
+        /* Elemen hiasan yang lebih dinamis */
         .spinning-decoration {
-            width: 100px;
-            height: 100px;
-            background-color: #4CAF50;
+            width: 120px;
+            height: 120px;
+            background-color: #1abc9c;
             position: absolute;
-            top: 50px;
-            right: 50px;
+            top: 40px;
+            right: 40px;
             border-radius: 50%;
-            animation: spin 5s linear infinite;
+            animation: spin 6s linear infinite;
+        }
+
+        .wavy-decoration {
+            position: absolute;
+            bottom: 50px;
+            left: 30px;
+            width: 180px;
+            height: 180px;
+            background: #e74c3c;
+            border-radius: 50%;
+            animation: wave 3s ease-in-out infinite;
         }
 
         @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        /* Elemen hiasan bergelombang */
-        .wavy-decoration {
-            position: absolute;
-            bottom: 100px;
-            left: 50px;
-            width: 150px;
-            height: 150px;
-            background: #FF6347;
-            border-radius: 50%;
-            animation: wave 2s ease-in-out infinite;
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         @keyframes wave {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(20px);
-            }
-            100% {
-                transform: translateY(0);
-            }
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(30px); }
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
         }
 
     </style>
 </head>
 <body>
 
+    <!-- Bagian header -->
     <header>
-        <h1>Selamat Datang di Toko Online Kami</h1>
+        <h1>Toko Produk Digital</h1>
     </header>
 
+    <!-- Konten utama -->
     <div class="container">
-        <h2 class="title">Produk Terbaru</h2>
+        <h2>Produk Digital Terlaris</h2>
         <div class="product">
-            <div>
-                <img src="https://via.placeholder.com/200" alt="Produk 1">
-                <p>Produk 1</p>
+            <!-- Produk 1 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x200" alt="Produk 1">
+                <h3>E-Book Panduan Sukses</h3>
+                <p>Pelajari cara mencapai kesuksesan dalam bisnis dengan panduan dari para ahli. Ebook ini dilengkapi strategi yang dapat diimplementasikan langsung.</p>
+                <a href="#" class="buy-button">Beli Sekarang</a>
             </div>
-            <div>
-                <img src="https://via.placeholder.com/200" alt="Produk 2">
-                <p>Produk 2</p>
+
+            <!-- Produk 2 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x200" alt="Produk 2">
+                <h3>Template Website Profesional</h3>
+                <p>Template modern dan responsif untuk membuat website bisnis Anda terlihat profesional. Mudah untuk dikustomisasi.</p>
+                <a href="#" class="buy-button">Beli Sekarang</a>
             </div>
-            <div>
-                <img src="https://via.placeholder.com/200" alt="Produk 3">
-                <p>Produk 3</p>
+
+            <!-- Produk 3 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x200" alt="Produk 3">
+                <h3>Kursus Online Marketing</h3>
+                <p>Pelajari strategi marketing online yang efektif melalui video tutorial lengkap. Cocok untuk pemula maupun profesional.</p>
+                <a href="#" class="buy-button">Beli Sekarang</a>
             </div>
         </div>
     </div>
@@ -124,6 +189,11 @@
 
     <!-- Elemen hiasan bergelombang -->
     <div class="wavy-decoration"></div>
+
+    <!-- Bagian footer -->
+    <footer>
+        <p>&copy; 2024 Digital Product Store. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
