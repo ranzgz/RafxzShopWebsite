@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Penjualan</title>
+    <style>
+        /* CSS untuk tata letak dasar */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .product {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .product img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            transition: transform 1s;
+        }
+
+        .product img:hover {
+            transform: rotate(360deg); /* Gambar produk berputar saat dihover */
+        }
+
+        .title {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Elemen hiasan berputar */
+        .spinning-decoration {
+            width: 100px;
+            height: 100px;
+            background-color: #4CAF50;
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            border-radius: 50%;
+            animation: spin 5s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Elemen hiasan bergelombang */
+        .wavy-decoration {
+            position: absolute;
+            bottom: 100px;
+            left: 50px;
+            width: 150px;
+            height: 150px;
+            background: #FF6347;
+            border-radius: 50%;
+            animation: wave 2s ease-in-out infinite;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Selamat Datang di Toko Online Kami</h1>
+    </header>
+
+    <div class="container">
+        <h2 class="title">Produk Terbaru</h2>
+        <div class="product">
+            <div>
+                <img src="https://via.placeholder.com/200" alt="Produk 1">
+                <p>Produk 1</p>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/200" alt="Produk 2">
+                <p>Produk 2</p>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/200" alt="Produk 3">
+                <p>Produk 3</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Elemen hiasan berputar -->
+    <div class="spinning-decoration"></div>
+
+    <!-- Elemen hiasan bergelombang -->
+    <div class="wavy-decoration"></div>
+
+</body>
+</html>
